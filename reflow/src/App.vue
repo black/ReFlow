@@ -1,11 +1,11 @@
-<template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-
-  <svg xmlns="http://www.w3.org/2000/svg" :view-box.camel="viewbox" class="container-svg">
-    <g v-for="(item,i) in items" :key="i">
-      <CircleFlow v-if="item.type=='circle'" :xpos="item.x" :ypos="item.y" :msg="item.msg" />
+<template> 
+  <CustomizeFlow />
+  <svg xmlns="http://www.w3.org/2000/svg" :view-box.camel="viewbox">
+    <g v-for="(item, i) in items" :key="i">
+      <CircleFlow v-if="item.type == 'circle'" :xpos="item.x" :ypos="item.y" :msg="item.msg" />
       <RectFlow v-if="item.type=='rect'" :xpos="item.x" :ypos="item.y" :msg="item.msg" />
       <RectRoundFlow v-if="item.type=='rect-round'" :xpos="item.x" :ypos="item.y" :msg="item.msg" />
+      <RectPillFlow v-if="item.type =='rect-pill'" :xpos="item.x" :ypos="item.y" :msg="item.msg" />
       <PathFlow :xstart="item.x" :ystart="item.y" :xend="item.x" :yend="item.y" />
     </g>
   </svg>
@@ -16,7 +16,9 @@
 import CircleFlow from './components/CircleFlow.vue'
 import RectFlow from './components/RectFlow.vue'
 import RectRoundFlow from './components/RectRoundFlow.vue'
+import RectPillFlow from './components/RectPillFlow.vue'
 import PathFlow from './components/PathFlow.vue'
+import CustomizeFlow from './components/CustomizeFlow.vue'
 
 
 export default {
@@ -25,7 +27,9 @@ export default {
     CircleFlow,
     RectFlow,
     RectRoundFlow,
-    PathFlow
+    RectPillFlow,
+    PathFlow,
+    CustomizeFlow
   },
   data() {
     return {
@@ -48,6 +52,12 @@ export default {
           x: 500,
           y: 200,
           msg: "People"
+        },
+        {
+          type: "rect-pill",
+          x: 600,
+          y: 350,
+          msg: "Person"
         }
         ],
       captureToggle: false,

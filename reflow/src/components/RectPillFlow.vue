@@ -1,6 +1,6 @@
 <template>
     <g class="container-svg">
-        <rect class="shape" :x="xpos" :y="ypos" :width="rectWidth" :height="rectHeight" :rx="8" />
+        <rect class="shape" :x="xpos" :y="ypos" :width="rectWidth" :height="rectHeight" :rx="rectCorner" />
         <text class="text-xs text-center" :x="xpos+widthHalf" :y="ypos+heightHalf" text-anchor="middle"
             alignment-baseline="middle">
             {{ msg }}
@@ -29,7 +29,10 @@ export default {
         },
         rectHeight() {
             return this.height
-        }, 
+        },
+        rectCorner() {
+            return this.height/2
+        },
         widthHalf() {
             return this.width / 2
         },
@@ -49,7 +52,7 @@ export default {
 
 .shape {
     stroke-width: 1;
-    stroke: #16b94d;
+    stroke: #ff0051;
     fill: none;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <g class="container-svg">
         <circle class="shape" :r="radius" :cx="xpos" :cy="ypos" />
-        <text class="text-xs text-center" text-anchor="middle" :x="xpos" :y="ypos">
+        <text text-anchor="middle" :x="xpos" :y="ypos">
             {{ msg }}
         </text>
     </g>
@@ -32,7 +32,7 @@ export default {
 
  .shape {
      stroke-width: 1;
-     stroke: #AE8EE9;
+     stroke: #5900ff;
      fill: none;
  }
 </style>
