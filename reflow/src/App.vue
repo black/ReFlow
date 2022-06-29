@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      size: 1000,
+      size: 1920,
       items: [
         {
           type:"circle",
@@ -68,7 +68,7 @@ export default {
   computed: { 
     viewbox() {
       return "0 0 " + this.size + " " + this.size;
-    }
+    }, 
   },
   methods: {
     mo: function (evt) {

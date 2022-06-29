@@ -54,6 +54,10 @@ export default {
 </script> 
 
 <style scoped>
+
+
+
+
 .container-svg {
     background-color: rgba(255, 134, 229, 0.098);
     padding: 5px;
@@ -63,5 +67,16 @@ export default {
     stroke-width: 1;
     stroke: #fac504;
     fill: none;
+    animation: dash 5s linear infinite;
 }
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+    from {
+        stroke-dashoffset: 100;
+    }
+}
+ 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <g class="container-svg">
         <circle class="shape" :r="radius" :cx="xpos" :cy="ypos" />
-        <text text-anchor="middle" :x="xpos" :y="ypos">
+        <text class="text-xs" text-anchor="middle" :x="xpos" :y="ypos">
             {{ msg }}
         </text>
     </g>
@@ -17,7 +17,7 @@ export default {
     },
     data() {
         return { 
-            radius:50, 
+            radius:20, 
         }
     }
 }
