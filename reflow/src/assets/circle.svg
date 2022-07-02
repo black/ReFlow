@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="Group_4236" data-name="Group 4236" transform="translate(-16 -112)">
+    <rect id="Rectangle_3082" data-name="Rectangle 3082" width="80" height="80" rx="8" transform="translate(16 112)" fill="#f3f3f3" opacity="0"/>
+    <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(32 128)" fill="none" stroke="#000" stroke-width="3">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="22.5" fill="none"/>
+    </g>
+  </g>
+</svg>
